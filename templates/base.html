@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanalakshmi Industries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+    <div class="nav-container">
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            <span class="brand-name">DHANALAKSHMI INDUSTRIES</span>
+        </div>
+        <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+       </nav>
+    </div>
+</header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>Dhanalakshmi Industries</h2>
+      <p>Leading manufacturer of high-quality plastic sacks and packaging solutions. Trusted by industries for durability and customization.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong> info@dhanalakshmiind@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9483136658 / +91 9493136649</p>
+      <p><strong>Address:</strong> Plot No. 74, Mastenahalli Industrial Area, Kaiwara village, Chintamani Taluk, Chikkaballapura District</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ now().year }} Dhanalakshmi Industries. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>

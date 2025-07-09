@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="services-section">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='images/service1.jpg') }}" alt="Plastic Sacks">
+                <h3>Plastic Sacks Production</h3>
+                <p>We specialize in the production of high-quality plastic sacks for various industrial and commercial applications. Our sacks are designed to meet the diverse packaging needs of our clients.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='images/service2.jpg') }}" alt="Custom Packaging">
+                <h3>Custom Packaging Solutions</h3>
+                <p>We offer tailor-made packaging solutions to meet the specific requirements of our clients. Our team works closely with customers to develop custom packaging designs that align with their branding and product needs.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='images/service3.jpg') }}" alt="Bulk Orders">
+                <h3>Bulk Order Fulfillment</h3>
+                <p>With our advanced production capabilities, we are equipped to fulfill large volume orders efficiently. Whether you need packaging for a small business or a large enterprise, we can cater to your bulk packaging needs.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

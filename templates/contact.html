@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="contact-section">
+
+    <!-- Google Maps Embed -->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps?q=Plot+No.+74,+Mastenahalli+Industrial+Area,+Kaiwara+village,+Chintamani+Taluk,+Chikkaballapura+District&output=embed"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Address and Inquiry -->
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2>Head Office</h2>
+            <p>Plot No. 74, Mastenahalli Industrial Area,<br>Kaiwara village, Chintamani Taluk,<br>Chikkaballapura District</p>
+            <p><strong>Email:</strong> info@ dhanalakshmiind@gmail.com</p>
+            <p><strong>Tel:</strong> +91 9483136658</p>
+            <p><strong>Tel:</strong> +91 9493136649</p>
+        </div>
+
+        <div class="contact-inquiries">
+            <h2>Inquiries</h2>
+            <p>For any inquiries related to our products and services, please feel free to get in touch with us. We are here to address your packaging needs and provide customized solutions.</p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</section>
+{% endblock %}

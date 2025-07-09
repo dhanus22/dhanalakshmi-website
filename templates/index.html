@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Home Section -->
+<section id="home" class="home-banner">
+    <div class="overlay">
+        <h1>WELCOME TO DHANALAKSHMI INDUSTRIES</h1>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<!-- About Us -->
+<section id="about" class="about-us-flex">
+  <div class="about-text">
+    <h1>About us</h1>
+    <div class="about-underline"></div>
+    <p>
+      Dhanalakshmi Industries is a leading plastic sacks manufacturer located at Plot No. 74, Mastenahalli Industrial Area, Kaiwara village, Chintamani Taluk, Chikkaballapura District. <br><br>
+      We are committed to delivering high-quality packaging solutions that meet the evolving needs of various industries. Our focus on innovation and sustainability sets us apart in the market.
+    </p>
+  </div>
+  <div class="about-image">
+    <img src="{{ url_for('static', filename='images/about-bg.jpg') }}" alt="About Image">
+  </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+    <h1>Our Services</h1>
+    <div class="services-grid">
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/service1.jpg') }}" alt="Plastic Sacks Production">
+            <h3>Plastic Sacks Production</h3>
+            <p>We specialize in the production of high-quality plastic sacks for various industrial and commercial applications. Our sacks are designed to meet the diverse packaging needs of our clients.</p>
+        </div>
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/service2.jpg') }}" alt="Custom Packaging Solutions">
+            <h3>Custom Packaging Solutions</h3>
+            <p>We offer tailor-made packaging solutions to meet the specific requirements of our clients. Our team works closely with customers to develop custom packaging designs that align with their branding and product needs.</p>
+        </div>
+        <div class="service-card">
+            <img src="{{ url_for('static', filename='images/service3.jpg') }}" alt="Bulk Order Fulfillment">
+            <h3>Bulk Order Fulfillment</h3>
+            <p>With our advanced production capabilities, we are equipped to fulfill large volume orders efficiently. Whether you need packaging for a small business or a large enterprise, we can cater to your bulk packaging needs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+    <h1>Contact Us</h1>
+
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps?q=Plot+No.+74,+Mastenahalli+Industrial+Area,+Kaiwara+village,+Chintamani+Taluk,+Chikkaballapura+District&output=embed"
+            allowfullscreen loading="lazy" title="Company Location Map"></iframe>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2>Head Office</h2>
+            <p>Plot No. 74, Mastenahalli Industrial Area,<br>Kaiwara village,<br>Chintamani Taluk,<br>Chikkaballapura District</p>
+            <p><strong>Email:</strong> info@dhanalakshmiind@gmail.com</p>
+            <p><strong>Tel:</strong> +91 9483136658</p>
+            <p><strong>Tel:</strong> +91 9493136649</p>
+        </div>
+        <div class="contact-inquiries">
+            <h2>Inquiries</h2>
+            <p>For any inquiries related to our products and services, please feel free to get in touch with us. We are here to address your packaging needs and provide customized solutions.</p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
